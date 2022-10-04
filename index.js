@@ -18,7 +18,7 @@ app.get("/", (req, res)=>{
 app.get("/api",(req, res)=>{
     res
     .status(204)
-    .send("Hint: /api/keikat")
+    .send("Error 204: No Content")
 })
 
 app.get("/api/keikat", (req,res)=>{
