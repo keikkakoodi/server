@@ -17,7 +17,6 @@ app.get("/", (req, res)=>{
 
 app.get("/api",(req, res)=>{
     res
-    .status(204)
     .send("Error 204: No Content")
 })
 
