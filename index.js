@@ -12,10 +12,16 @@ const keikkaData =
 app.get("/", (req, res)=>{
     res
     .status(200)
-    .send(`Hint: Keikkadata at "/keikat"`);
+    .send("Hint: /api/keikat");
 });
 
-app.get("/keikat", (req,res)=>{
+app.get("/api",(req, res)=>{
+    res
+    .status(204)
+    .send("Hint: /api/keikat")
+})
+
+app.get("/api/keikat", (req,res)=>{
     res
     .status(200)
     .json(keikkaData);
