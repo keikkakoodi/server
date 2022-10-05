@@ -3,11 +3,12 @@ const cors = require("cors");
 
 const app = express(); 
 app.use(cors());
-const keikkaData =
-{
-    700: "Eloton",
-    701:"Elvytys"
-}
+const keikkaData =[
+
+    {700: "Eloton"},
+    {701:"Elvytys"}
+
+]
 
 app.get("/", (req, res)=>{
     res
