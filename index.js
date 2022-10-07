@@ -26,6 +26,12 @@ app.get("/api/keikat", (req,res)=>{
     .json(keikkaData);
 });
 
+app.get ("*", (req, res) =>{
+    res
+    .status(404)
+    .send("Error 404: Not Found")
+})
+
 app.listen(process.env.PORT || 80, ()=>{
     console.log(`Server listening`);
 })
