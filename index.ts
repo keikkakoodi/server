@@ -1,5 +1,5 @@
-const express = require("express");
-const cors = require("cors");
+import express = require("express");
+import cors = require("cors");
 
 const app = express(); 
 app.use(cors());
@@ -37,6 +37,6 @@ app.get ("*", (req, res) =>{
     .send("Error 404: Not Found")
 })
 
-app.listen(process.env.PORT || 80, ()=>{
+app.listen(80, ()=>{
     console.log(`Server listening`);
 })
