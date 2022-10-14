@@ -3,16 +3,9 @@ import cors = require("cors");
 
 const app = express(); 
 app.use(cors());
-const keikkaData =[
-    {
-    "id": 700,
-    "desc":"Eloton"
-    },
-    {
-    "id":701,
-    "desc":"Elvytys"
-    }
-]
+
+import * as keikat from "./keikat.json"
+console.log(keikat);
 
 app.get("/", (req, res)=>{
     res
@@ -28,7 +21,7 @@ app.get("/api",(req, res)=>{
 app.get("/api/keikat", (req,res)=>{
     res
     .status(200)
-    .json(keikkaData);
+    .json(keikat);
 });
 
 app.get ("*", (req, res) =>{
